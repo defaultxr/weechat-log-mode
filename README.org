@@ -1,0 +1,36 @@
+#+TITLE: weechat-log-mode
+#+DESCRIPTION: A simple Emacs mode for viewing WeeChat log files.
+
+This package provides a simple Emacs mode for viewing WeeChat log files. Its main feature is basic syntax highlighting to make them easier to read.
+
+Unfortunately it is not possible to use the same highlighting as the WeeChat UI or weechat.el since those colors are usually provided directly by WeeChat itself and are not stored in the log files.
+
+* Installation
+
+Download this repository, then put the following in your init.el:
+
+#+begin_src emacs-lisp
+(require 'weechat-log-mode "/path/to/weechat-log-mode/weechat-log-mode.el" t)
+#+end_src
+
+After loading weechat-log-mode, opening any files ending in ~.weechatlog~ will automatically activate the mode.
+
+weechat-log-mode also provides a function ~weechat-open-log~, which, as the name suggests, can be used to open the log file associated with a channel. If the current buffer is a weechat-mode buffer, it opens the corresponding log. For convenience you may want to bind this to a key in ~weechat-mode-map~ like so:
+
+#+begin_src emacs-lisp
+  (define-key weechat-mode-map (kbd "C-c C-l") 'weechat-open-log)
+#+end_src
+
+# * Usage
+
+* Future
+
+- Improve highlighting
+  - Figure out if there's some way to get the colors from WeeChat
+- Navigation commands?
+
+* Links
+
+- [[https://weechat.org][WeeChat's official site]]
+- [[https://github.com/weechat/weechat][WeeChat GitHub repository]]
+- [[https://github.com/the-kenny/weechat.el][weechat.el]] (now archived and read-only)
