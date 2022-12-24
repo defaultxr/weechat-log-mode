@@ -15,13 +15,17 @@ Download this repository, then put the following in your init.el:
 
 After loading weechat-log-mode, opening any files ending in ~.weechatlog~ will automatically activate the mode.
 
-weechat-log-mode also provides a function ~weechat-open-log~, which, as the name suggests, can be used to open the log file associated with a channel. If the current buffer is a weechat-mode buffer, it opens the corresponding log. For convenience you may want to bind this to a key in ~weechat-mode-map~ like so:
+weechat-log-mode also provides a command ~weechat-open-log~, which, as the name suggests, can be used to open the log file associated with a channel. If the current buffer is a weechat-mode buffer, it opens the corresponding log. For convenience you may want to bind this to a key in ~weechat-mode-map~ like so:
 
 #+begin_src emacs-lisp
   (define-key weechat-mode-map (kbd "C-c C-l") 'weechat-open-log)
 #+end_src
 
-# * Usage
+There is also a similar command to do the reverse (jump from the log file back to the channel buffer). It is bound to ~C-c C-l~ in weechat-log-mode buffers.
+
+* Usage
+
+- ~C-c C-l~ - ~weechat-log-mode-open-channel~ - Jump from the log file to the equivalent weechat-mode buffer.
 
 * Future
 
