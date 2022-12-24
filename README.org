@@ -1,7 +1,7 @@
 #+TITLE: weechat-log-mode
 #+DESCRIPTION: A simple Emacs mode for viewing WeeChat log files.
 
-This package provides a simple Emacs mode for viewing WeeChat log files. Its main feature is basic syntax highlighting to make them easier to read.
+This package provides a simple Emacs mode for viewing [[https://weechat.org/][WeeChat]] log files. Its main feature is basic syntax highlighting to make them easier to read, as well as a few small convenience functions.
 
 Unfortunately it is not possible to use the same highlighting as the WeeChat UI or weechat.el since those colors are usually provided directly by WeeChat itself and are not stored in the log files.
 
