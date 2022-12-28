@@ -126,6 +126,7 @@ See also: `weechat-open-log'"
 
 ;;; define the mode
 
+;;;###autoload
 (define-derived-mode weechat-log-mode fundamental-mode "weechat-log"
   "Major mode for WeeChat log files."
   (use-local-map tracker-mode-map)
