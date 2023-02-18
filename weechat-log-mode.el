@@ -92,7 +92,7 @@
 See also: `weechat-logs-directory', `weechat-log-mode-open-channel'"
   (interactive)
   (let* ((channel (or channel (buffer-name)))
-         (files (directory-files weechat-logs-directory t (regexp-quote channel)))
+         (files (directory-files weechat-logs-directory t (concat "\\b" (regexp-quote channel) "\\b")))
          (files-len (length files)))
     (if (= files-len 0)
         (user-error "No matching log file found for `%s' in `%s'" channel weechat-logs-directory)
