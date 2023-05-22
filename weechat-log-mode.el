@@ -129,7 +129,7 @@ See also: `weechat-open-log'"
 ;;;###autoload
 (define-derived-mode weechat-log-mode fundamental-mode "weechat-log"
   "Major mode for WeeChat log files."
-  (use-local-map tracker-mode-map)
+  (use-local-map weechat-log-mode-map)
   (set-syntax-table weechat-log-mode-syntax-table)
   (setq font-lock-defaults '(weechat-log-mode-font-lock)))
 
